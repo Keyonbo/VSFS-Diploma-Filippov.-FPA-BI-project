@@ -1,18 +1,13 @@
 dbt-fusion 2.0.0-preview.32
    Loading profiles.yml
- Debugging profile: dev
- Debugging dbt version: 2.0.0-preview.32
- Debugging platform: windows x86_64 (windows)
- Debugging adapter type: snowflake (remote)
- Debugging dependencies:
-  git: OK
- Debugging connection:
-  "account": "ctqlryr-ea47137",
-  "user": "DBT_USER",
-  "database": "FPABI",
-  "warehouse": "FPABI_WH",
-  "schema": "DBT",
-  "role": "FPABI_DBT_ROLE"
-error: dbt1011: [Snowflake] 390100 (08004): Incorrect username or password was specified. (SQLSTATE: 08004, Vendor code: 390100)
-  Finished 'debug'  with 1 error in 606ms
+   Loading packages.yml
+    Passed [  0.82s] test  DBT_dbt_test__audit.not_null_mart_finance__pnl_weekly_entity_id
+    Passed [  1.38s] test  DBT_dbt_test__audit.not_null_mart_finance__cash_inflow_13w_week_start
+    Passed [  2.33s] test  DBT_dbt_test__audit.not_null_fct_reservation_product_id
+    Passed [  2.59s] test  DBT_dbt_test__audit.not_null_fct_reservation_reservation_id
+    Passed [  2.85s] test  DBT_dbt_test__audit.not_null_mart_finance__pnl_weekly_week_start
+    Passed [  3.28s] test  DBT_dbt_test__audit.not_null_mart_finance__cash_inflow_13w_forecast_cash_inflow
+    Passed [  3.48s] test  DBT_dbt_test__audit.unique_fct_reservation_reservation_id
+    Passed [  4.61s] test  DBT_dbt_test__audit.relationships_fct_reservation_3410d5884006139a52dc87bcdbadc931
+  Finished 'test' target 'dev' in 5s 32ms
 New version available 2.0.0-preview.102 (run `dbt system update`)

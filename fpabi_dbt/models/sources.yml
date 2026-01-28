@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: raw
     database: FPABI
-    schema: RAW
+    schema: DBT_RAW
     tables:
       - name: dim_date
       - name: dim_entity

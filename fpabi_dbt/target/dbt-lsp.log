@@ -298,3 +298,4 @@ Schema 'FPABI.RAW' does not exist or not authorized.
 12:50:21.223328 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.f_sales_line [success]
 12:50:21.223334 [info ]: Finished analyzing [  0.16s] (17 nodes, 0 skipped, 0 errors)
 12:53:08.748767 [info ]: Loading profiles.yml
+12:56:55.375053 [info ]: Loading profiles.yml
