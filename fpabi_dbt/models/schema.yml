@@ -9,8 +9,9 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('dim_product')
-              field: product_id
+              arguments:
+                to: ref('dim_product_core')
+                field: product_id
 
   - name: mart_finance__pnl_weekly
     columns:

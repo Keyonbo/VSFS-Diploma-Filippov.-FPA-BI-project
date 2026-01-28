@@ -1,5 +1,3 @@
-# Save as ~/.dbt/profiles.yml
-# Admin password is NOT used by dbt. Only DBT_USER credentials are used below.
 fpabi:
   target: dev
   outputs:
@@ -7,10 +5,9 @@ fpabi:
       type: snowflake
       account: "ctqlryr-ea47137"
       user: "DBT_USER"
-      password: "lKx^4j^B#P&fYs!aQ(%Y"
+      password: "R9m!q2Vt#7KpX4sNw@1F"
       role: "FPABI_DBT_ROLE"
       warehouse: "FPABI_WH"
       database: "FPABI"
       schema: "DBT"
       threads: 8
-      client_session_keep_alive: false

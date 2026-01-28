@@ -7,14 +7,12 @@ dbt-fusion 2.0.0-preview.32
  Debugging dependencies:
   git: OK
  Debugging connection:
-  "client_session_keep_alive": false,
   "account": "ctqlryr-ea47137",
   "user": "DBT_USER",
   "database": "FPABI",
   "warehouse": "FPABI_WH",
   "schema": "DBT",
   "role": "FPABI_DBT_ROLE"
- Debugging connection test: OK
-  Debugged All checks passed!
-  Finished 'debug' target 'dev' in 1s 160ms
+error: dbt1011: [Snowflake] 390100 (08004): Incorrect username or password was specified. (SQLSTATE: 08004, Vendor code: 390100)
+  Finished 'debug'  with 1 error in 606ms
 New version available 2.0.0-preview.102 (run `dbt system update`)

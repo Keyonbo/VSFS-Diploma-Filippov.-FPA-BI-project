@@ -5,6 +5,9 @@ exposures:
     type: dashboard
     maturity: medium
     url: https://app.powerbi.com/  # replace later
+    owner:
+      name: "VSFS Diploma"
+      email: "owner@example.com"
     description: "CFO pack: weekly P&L, weekly PVM (NUP), 13-week cash inflow forecast."
     depends_on:
       - ref('mart_finance__pnl_weekly')

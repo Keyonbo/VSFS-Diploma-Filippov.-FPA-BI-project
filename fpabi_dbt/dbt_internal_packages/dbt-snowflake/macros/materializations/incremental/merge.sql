@@ -28,46 +28,26 @@
     {%- endif -%}
     {%- endset -%}
 
-    {#-- Skip transaction wrapping for catalog-linked databases --#}
-    {% if snowflake__is_catalog_linked_database(relation=config.model) %}
-        {% do return(dml) %}
-    {% else %}
-        {% do return(snowflake_dml_explicit_transaction(dml)) %}
-    {% endif %}
+    {% do return(snowflake_dml_explicit_transaction(dml)) %}
 
 {% endmacro %}
 
 -- funcsign: (string, string, string|list[string]|none, list[base_column], optional[list[string]]) -> string
 {% macro snowflake__get_delete_insert_merge_sql(target, source, unique_key, dest_columns, incremental_predicates) %}
     {% set dml = default__get_delete_insert_merge_sql(target, source, unique_key, dest_columns, incremental_predicates) %}
-    {#-- Skip transaction wrapping for catalog-linked databases --#}
-    {% if snowflake__is_catalog_linked_database(relation=config.model) %}
-        {% do return(dml) %}
-    {% else %}
-        {% do return(snowflake_dml_explicit_transaction(dml)) %}
-    {% endif %}
+    {% do return(snowflake_dml_explicit_transaction(dml)) %}
 {% endmacro %}
 
 -- funcsign: (string, string, list[base_column]) -> string
 {% macro snowflake__snapshot_merge_sql(target, source, insert_cols) %}
     {% set dml = default__snapshot_merge_sql(target, source, insert_cols) %}
-    {#-- Skip transaction wrapping for catalog-linked databases --#}
-    {% if snowflake__is_catalog_linked_database(relation=target) %}
-        {% do return(dml) %}
-    {% else %}
-        {% do return(snowflake_dml_explicit_transaction(dml)) %}
-    {% endif %}
+    {% do return(snowflake_dml_explicit_transaction(dml)) %}
 {% endmacro %}
 
 -- funcsign: (string) -> string
 {% macro snowflake__get_incremental_append_sql(get_incremental_append_sql) %}
     {% set dml = default__get_incremental_append_sql(get_incremental_append_sql) %}
-    {#-- Skip transaction wrapping for catalog-linked databases --#}
-    {% if snowflake__is_catalog_linked_database(config.model) %}
-        {% do return(dml) %}
-    {% else %}
-        {% do return(snowflake_dml_explicit_transaction(dml)) %}
-    {% endif %}
+    {% do return(snowflake_dml_explicit_transaction(dml)) %}
 {% endmacro %}
 
 {% macro snowflake__get_incremental_microbatch_sql(arg_dict) %}

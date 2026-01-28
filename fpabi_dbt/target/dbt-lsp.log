@@ -1,0 +1,300 @@
+==================== 2026-01-28T11:09:29.872787Z | 28e6d363-0d22-4975-bc8d-3b0491123f2b ====================
+11:09:29.872934 [info ]: Starting dbt LSP server
+11:09:29.873015 [info ]: Connecting to LSP client on port 8000
+11:09:29.878482 [info ]: Successfully connected to LSP client
+11:09:29.878530 [info ]: Creating LSP service...
+11:09:29.957924 [info ]: Creating LSP server...
+11:09:29.957989 [info ]: Starting LSP server...
+11:09:29.984699 [info ]: Started loading project
+11:09:29.993646 [info ]: Finished loading project [  0.01s]
+11:09:57.950733 [info ]: Started loading project
+11:09:57.951848 [info ]: Loading profiles.yml
+11:09:58.151301 [info ]: Installing packages
+11:09:58.153470 [info ]: Installing dbt-labs/dbt_utils
+11:09:58.563677 [info ]:  Installed dbt-labs/dbt_utils: 1.3.3
+11:09:58.565717 [info ]:  Installed 1 package
+11:09:58.565934 [debug]:    Started loading packages
+11:09:58.569511 [info ]: Loading profiles.yml
+11:09:58.590136 [debug]:     Loaded [  0.02s] packages
+11:09:58.590197 [debug]:    Started loading internal packages
+11:09:58.617369 [debug]:     Loaded [  0.03s] internal packages
+11:09:58.617504 [info ]: Finished loading project [  0.67s]
+11:09:58.617873 [info ]: Started parsing
+11:09:58.781421 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models\schema.yml:13:22
+11:09:58.808095 [info ]: Finished parsing [  0.19s]
+12:49:12.393890 [info ]: Started loading project
+12:49:12.395392 [info ]: Loading profiles.yml
+12:49:12.432230 [debug]:    Started loading packages
+12:49:12.447462 [debug]:     Loaded [  0.02s] packages
+12:49:12.447501 [debug]:    Started loading internal packages
+12:49:12.460650 [debug]:     Loaded [  0.01s] internal packages
+12:49:12.460972 [info ]: Started parsing
+12:49:12.498045 [info ]: Finished loading project [  0.10s]
+12:49:12.508679 [info ]: Finished parsing [  0.05s]
+12:49:12.848271 [info ]: Started loading project
+12:49:12.848953 [info ]: Loading profiles.yml
+12:49:12.864388 [debug]:    Started loading packages
+12:49:12.871924 [debug]:     Loaded [  0.01s] packages
+12:49:12.871956 [debug]:    Started loading internal packages
+12:49:12.885211 [debug]:     Loaded [  0.01s] internal packages
+12:49:12.885498 [info ]: Started parsing
+12:49:12.919927 [info ]: Finished loading project [  0.07s]
+12:49:12.930336 [info ]: Finished parsing [  0.04s]
+12:49:53.994187 [info ]: Started loading project
+12:49:53.995303 [info ]: Loading profiles.yml
+12:49:54.018354 [debug]:    Started loading packages
+12:49:54.027022 [debug]:     Loaded [  0.01s] packages
+12:49:54.027056 [debug]:    Started loading internal packages
+12:49:54.039071 [debug]:     Loaded [  0.01s] internal packages
+12:49:54.039366 [info ]: Started parsing
+12:49:54.073047 [info ]: Finished loading project [  0.08s]
+12:49:54.124239 [info ]: Finished parsing [  0.08s]
+12:49:54.525384 [info ]: Started loading project
+12:49:54.526220 [info ]: Loading profiles.yml
+12:49:54.542245 [debug]:    Started loading packages
+12:49:54.549287 [debug]:     Loaded [  0.01s] packages
+12:49:54.549319 [debug]:    Started loading internal packages
+12:49:54.562263 [debug]:     Loaded [  0.01s] internal packages
+12:49:54.562535 [info ]: Started parsing
+12:49:54.596761 [info ]: Finished loading project [  0.07s]
+12:49:54.628672 [info ]: Finished parsing [  0.07s]
+12:50:12.806945 [info ]: Started loading project
+12:50:12.808226 [info ]: Loading profiles.yml
+12:50:12.826189 [debug]:    Started loading packages
+12:50:12.834931 [debug]:     Loaded [  0.01s] packages
+12:50:12.834967 [debug]:    Started loading internal packages
+12:50:12.847864 [debug]:     Loaded [  0.01s] internal packages
+12:50:12.848319 [info ]: Started parsing
+12:50:12.881320 [info ]: Finished loading project [  0.07s]
+12:50:12.912154 [error]: dbt1005: Found ambiguous ref('dim_account') pointing to multiple nodes: ['seed.fpabi.dim_account', 'model.fpabi.dim_account']
+  --> models\marts\mart_finance__pnl_weekly.sql:11:8
+12:50:12.912232 [warn ]: dbt1005: Found ambiguous ref('dim_product') pointing to multiple nodes: ['seed.fpabi.dim_product', 'model.fpabi.dim_product']
+  --> generic_tests\relationships_fct_reservation_131f0608f8069601b2ab707fa115085f.sql:1:122
+12:50:12.914394 [info ]: Cached model count updated: 12 models (estimate)
+12:50:12.914473 [info ]: Cached model count updated: 12 models (accurate)
+12:50:12.914613 [info ]: Started scheduling
+12:50:12.915138 [info ]: Finished scheduling [  0.00s]
+12:50:12.916500 [info ]: Started deferring state
+12:50:12.916602 [info ]: Finished deferring state [  0.00s]
+12:50:12.918970 [info ]: Started downloading schemas
+12:50:12.919168 [debug]: Started downloading relations
+12:50:12.919264 [debug]: Finished downloading relations [  0.00s]
+12:50:12.919686 [info ]: Finished parsing [  0.07s]
+12:50:15.460429 [debug]: Query executed on node unknown:
+describe table "FPABI"."RAW"."DIM_ACCOUNT"
+12:50:16.010214 [debug]: Query executed on node unknown:
+describe table "FPABI"."RAW"."DIM_DATE"
+12:50:17.051345 [info ]: Started loading project
+12:50:17.052412 [info ]: Loading profiles.yml
+12:50:17.056417 [info ]: Finished downloading schemas [  4.14s]
+12:50:17.069396 [debug]:    Started loading packages
+12:50:17.077254 [debug]:     Loaded [  0.01s] packages
+12:50:17.077287 [debug]:    Started loading internal packages
+12:50:17.089510 [debug]:     Loaded [  0.01s] internal packages
+12:50:17.089778 [info ]: Started parsing
+12:50:17.119338 [info ]: Finished loading project [  0.07s]
+12:50:17.151191 [error]: dbt1005: Found ambiguous ref('dim_account') pointing to multiple nodes: ['seed.fpabi.dim_account', 'model.fpabi.dim_account']
+  --> models\marts\mart_finance__pnl_weekly.sql:11:8
+12:50:17.151244 [warn ]: dbt1005: Found ambiguous ref('dim_product') pointing to multiple nodes: ['seed.fpabi.dim_product', 'model.fpabi.dim_product']
+  --> generic_tests\relationships_fct_reservation_131f0608f8069601b2ab707fa115085f.sql:1:122
+12:50:17.153070 [info ]: Cached model count updated: 12 models (estimate)
+12:50:17.153093 [info ]: Cached model count updated: 12 models (accurate)
+12:50:17.153168 [info ]: Started scheduling
+12:50:17.153372 [info ]: Finished scheduling [  0.00s]
+12:50:17.154251 [info ]: Started deferring state
+12:50:17.154273 [info ]: Finished deferring state [  0.00s]
+12:50:17.154893 [info ]: Started downloading schemas
+12:50:17.154964 [debug]: Started downloading relations
+12:50:17.154985 [debug]: Finished downloading relations [  0.00s]
+12:50:17.155064 [info ]: Finished parsing [  0.07s]
+12:50:17.447821 [debug]: Query executed on node unknown:
+describe table "FPABI"."RAW"."DIM_ACCOUNT"
+12:50:17.685439 [debug]: Query executed on node unknown:
+describe table "FPABI"."RAW"."DIM_DATE"
+12:50:18.503297 [debug]: Query executed on node unknown:
+describe table "FPABI"."RAW"."DIM_ENTITY"
+12:50:18.756657 [debug]: Query executed on node unknown:
+describe table "FPABI"."RAW"."F_BANK_TXN"
+12:50:18.782757 [debug]: Query executed on node unknown:
+describe table "FPABI"."RAW"."DIM_PRODUCT"
+12:50:19.020582 [debug]: Query executed on node unknown:
+describe table "FPABI"."RAW"."F_GL_ENTRY"
+12:50:19.361903 [debug]: Query executed on node unknown:
+describe table "FPABI"."RAW"."F_PLAN"
+12:50:19.608992 [debug]: Query executed on node unknown:
+describe table "FPABI"."RAW"."F_SALES_LINE"
+12:50:19.812032 [debug]: Query executed on node unknown:
+describe table "FPABI"."RAW"."T_ACCESS"
+12:50:20.876001 [warn ]: dbt1014: Failed to download source schema for 'source.fpabi.raw.dim_account'. Setting 'static_analysis' to off. Skipping analysis for 'model.fpabi.dim_account': [Snowflake] 002003 (02000): SQL compilation error:
+Schema 'FPABI.RAW' does not exist or not authorized.
+12:50:20.876200 [warn ]: dbt1014: Failed to download source schema for 'source.fpabi.raw.dim_date'. Setting 'static_analysis' to off. Skipping analysis for 'model.fpabi.dim_date': [Snowflake] 002003 (02000): SQL compilation error:
+Schema 'FPABI.RAW' does not exist or not authorized.
+12:50:20.876233 [warn ]: dbt1014: Failed to download source schema for 'source.fpabi.raw.dim_entity'. Setting 'static_analysis' to off. Skipping analysis for 'model.fpabi.mart_finance__cash_inflow_13w': [Snowflake] 002003 (02000): SQL compilation error:
+Schema 'FPABI.RAW' does not exist or not authorized.
+12:50:20.876256 [warn ]: dbt1014: Failed to download source schema for 'source.fpabi.raw.dim_product'. Setting 'static_analysis' to off. Skipping analysis for 'model.fpabi.dim_product': [Snowflake] 002003 (02000): SQL compilation error:
+Schema 'FPABI.RAW' does not exist or not authorized.
+12:50:20.876276 [warn ]: dbt1014: Failed to download source schema for 'source.fpabi.raw.f_bank_txn'. Setting 'static_analysis' to off. Skipping analysis for 'model.fpabi.stg_fin_bank_txn': [Snowflake] 002003 (02000): SQL compilation error:
+Schema 'FPABI.RAW' does not exist or not authorized.
+12:50:20.876294 [warn ]: dbt1014: Failed to download source schema for 'source.fpabi.raw.f_gl_entry'. Setting 'static_analysis' to off. Skipping analysis for 'model.fpabi.stg_nav_gl_entry': [Snowflake] 002003 (02000): SQL compilation error:
+Schema 'FPABI.RAW' does not exist or not authorized.
+12:50:20.876311 [warn ]: dbt1014: Failed to download source schema for 'source.fpabi.raw.f_plan'. Setting 'static_analysis' to off. Skipping analysis for 'model.fpabi.stg_fin_plan': [Snowflake] 002003 (02000): SQL compilation error:
+Schema 'FPABI.RAW' does not exist or not authorized.
+12:50:20.876329 [warn ]: dbt1014: Failed to download source schema for 'source.fpabi.raw.f_sales_line'. Setting 'static_analysis' to off. Skipping analysis for 'model.fpabi.stg_res_sales_line': [Snowflake] 002003 (02000): SQL compilation error:
+Schema 'FPABI.RAW' does not exist or not authorized.
+12:50:20.876345 [warn ]: dbt1014: Failed to download source schema for 'source.fpabi.raw.t_access'. Setting 'static_analysis' to off. Skipping analysis for 'model.fpabi.stg_fin_access': [Snowflake] 002003 (02000): SQL compilation error:
+Schema 'FPABI.RAW' does not exist or not authorized.
+12:50:21.023743 [info ]: Started building task graph
+12:50:21.024234 [info ]: Finished building task graph [  0.00s]
+12:50:21.024671 [info ]: Started rendering (29 nodes)
+12:50:21.024734 [info ]: Started seed DBT_RAW.t_access
+12:50:21.024784 [debug]: Started rendering seed DBT_RAW.t_access
+12:50:21.024826 [info ]: Started seed DBT_RAW.f_sales_line
+12:50:21.024835 [debug]: Started rendering seed DBT_RAW.f_sales_line
+12:50:21.024842 [info ]: Started seed DBT_RAW.f_plan
+12:50:21.024847 [debug]: Started rendering seed DBT_RAW.f_plan
+12:50:21.024852 [info ]: Started seed DBT_RAW.f_gl_entry
+12:50:21.024855 [debug]: Started rendering seed DBT_RAW.f_gl_entry
+12:50:21.024862 [info ]: Started seed DBT_RAW.f_bank_txn
+12:50:21.024866 [debug]: Started rendering seed DBT_RAW.f_bank_txn
+12:50:21.024871 [info ]: Started seed DBT_RAW.f_assumption_values
+12:50:21.024875 [debug]: Started rendering seed DBT_RAW.f_assumption_values
+12:50:21.024870 [info ]: Finished downloading schemas [  3.87s]
+12:50:21.024880 [info ]: Started seed DBT_RAW.f_ar_invoice
+12:50:21.024883 [debug]: Started rendering seed DBT_RAW.f_ar_invoice
+12:50:21.024888 [info ]: Started seed DBT_RAW.f_ap_invoice
+12:50:21.024891 [debug]: Started rendering seed DBT_RAW.f_ap_invoice
+12:50:21.024897 [info ]: Started seed DBT_RAW.dim_region
+12:50:21.024900 [debug]: Started rendering seed DBT_RAW.dim_region
+12:50:21.024905 [info ]: Started seed DBT_RAW.dim_product
+12:50:21.024908 [debug]: Started rendering seed DBT_RAW.dim_product
+12:50:21.024913 [info ]: Started seed DBT_RAW.dim_entity
+12:50:21.024916 [debug]: Started rendering seed DBT_RAW.dim_entity
+12:50:21.024921 [info ]: Started seed DBT_RAW.dim_date
+12:50:21.024924 [debug]: Started rendering seed DBT_RAW.dim_date
+12:50:21.024929 [info ]: Started seed DBT_RAW.dim_customer
+12:50:21.024934 [debug]: Started rendering seed DBT_RAW.dim_customer
+12:50:21.024939 [info ]: Started seed DBT_RAW.dim_cost_center
+12:50:21.024943 [debug]: Started rendering seed DBT_RAW.dim_cost_center
+12:50:21.024947 [info ]: Started seed DBT_RAW.dim_channel
+12:50:21.024950 [debug]: Started rendering seed DBT_RAW.dim_channel
+12:50:21.024958 [info ]: Started seed DBT_RAW.dim_assumption
+12:50:21.024961 [debug]: Started rendering seed DBT_RAW.dim_assumption
+12:50:21.024965 [info ]: Started seed DBT_RAW.dim_account
+12:50:21.024969 [debug]: Started rendering seed DBT_RAW.dim_account
+12:50:21.024982 [info ]: Started model DBT_STG.stg_fin_plan
+12:50:21.024986 [debug]: Started rendering model DBT_STG.stg_fin_plan
+12:50:21.024991 [info ]: Started model DBT_STG.stg_fin_access
+12:50:21.024995 [debug]: Started rendering model DBT_STG.stg_fin_access
+12:50:21.025000 [info ]: Started model DBT_CORE.dim_product
+12:50:21.025003 [debug]: Started rendering model DBT_CORE.dim_product
+12:50:21.025008 [info ]: Started model DBT_CORE.dim_date
+12:50:21.025012 [debug]: Started rendering model DBT_CORE.dim_date
+12:50:21.025018 [info ]: Started model DBT_CORE.dim_account
+12:50:21.025021 [debug]: Started rendering model DBT_CORE.dim_account
+12:50:21.025027 [info ]: Started model DBT_MART.mart_finance__pvm_weekly
+12:50:21.025030 [debug]: Started rendering model DBT_MART.mart_finance__pvm_weekly
+12:50:21.025034 [info ]: Started model DBT_MART.mart_finance__pnl_weekly
+12:50:21.025037 [debug]: Started rendering model DBT_MART.mart_finance__pnl_weekly
+12:50:21.025047 [info ]: Started model DBT_STG.stg_nav_gl_entry
+12:50:21.025050 [debug]: Started rendering model DBT_STG.stg_nav_gl_entry
+12:50:21.025055 [info ]: Started model DBT_MART.mart_finance__cash_inflow_13w
+12:50:21.025058 [debug]: Started rendering model DBT_MART.mart_finance__cash_inflow_13w
+12:50:21.025063 [info ]: Started model DBT_STG.stg_fin_bank_txn
+12:50:21.025066 [debug]: Started rendering model DBT_STG.stg_fin_bank_txn
+12:50:21.025075 [info ]: Started model DBT_CORE.fct_reservation
+12:50:21.025079 [debug]: Started rendering model DBT_CORE.fct_reservation
+12:50:21.025085 [info ]: Started model DBT_STG.stg_res_sales_line
+12:50:21.025088 [debug]: Started rendering model DBT_STG.stg_res_sales_line
+12:50:21.029427 [info ]:     Failed [  0.00s] model DBT_MART.mart_finance__pnl_weekly (table)
+12:50:21.029516 [debug]: Finished rendering [  0.00s] model DBT_MART.mart_finance__pnl_weekly [error]
+12:50:21.029603 [error]: dbt1501: Failed to render SQL not a key type: ref not found for package: fpabi, model: dim_account, version: None
+(in models\marts\mart_finance__pnl_weekly.sql:11:8)
+  --> models\marts\mart_finance__pnl_weekly.sql:11:8
+12:50:21.040697 [info ]:  Succeeded [  0.01s] model DBT_MART.mart_finance__cash_inflow_13w (table)
+12:50:21.040796 [debug]: Finished rendering [  0.02s] model DBT_MART.mart_finance__cash_inflow_13w [success]
+12:50:21.044961 [info ]:  Succeeded [  0.02s] model DBT_CORE.fct_reservation (table)
+12:50:21.045048 [debug]: Finished rendering [  0.02s] model DBT_CORE.fct_reservation [success]
+12:50:21.056376 [info ]:  Succeeded [  0.03s] model DBT_STG.stg_res_sales_line (view)
+12:50:21.056467 [debug]: Finished rendering [  0.03s] model DBT_STG.stg_res_sales_line [success]
+12:50:21.057008 [info ]:  Succeeded [  0.03s] model DBT_STG.stg_nav_gl_entry (view)
+12:50:21.057066 [debug]: Finished rendering [  0.03s] model DBT_STG.stg_nav_gl_entry [success]
+12:50:21.057125 [info ]:  Succeeded [  0.03s] model DBT_STG.stg_fin_access (view)
+12:50:21.057143 [debug]: Finished rendering [  0.03s] model DBT_STG.stg_fin_access [success]
+12:50:21.057183 [info ]:  Succeeded [  0.03s] model DBT_MART.mart_finance__pvm_weekly (table)
+12:50:21.057196 [debug]: Finished rendering [  0.03s] model DBT_MART.mart_finance__pvm_weekly [success]
+12:50:21.060460 [info ]:  Succeeded [  0.04s] model DBT_STG.stg_fin_plan (view)
+12:50:21.060522 [info ]:  Succeeded [  0.04s] model DBT_STG.stg_fin_bank_txn (view)
+12:50:21.060537 [debug]: Finished rendering [  0.04s] model DBT_STG.stg_fin_bank_txn [success]
+12:50:21.060562 [debug]: Finished rendering [  0.04s] model DBT_STG.stg_fin_plan [success]
+12:50:21.065865 [debug]: Finished rendering [  0.04s] seed DBT_RAW.dim_cost_center [success]
+12:50:21.065957 [info ]: Started analyzing (17 nodes)
+12:50:21.065975 [debug]: Started analyzing seed DBT_RAW.dim_cost_center
+12:50:21.066005 [debug]: Finished rendering [  0.04s] seed DBT_RAW.dim_entity [success]
+12:50:21.066053 [debug]: Started analyzing seed DBT_RAW.dim_entity
+12:50:21.066184 [info ]:  Succeeded [  0.04s] seed  DBT_RAW.dim_entity (table)
+12:50:21.066221 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_entity [success]
+12:50:21.066250 [info ]:  Succeeded [  0.04s] seed  DBT_RAW.dim_cost_center (table)
+12:50:21.066262 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_cost_center [success]
+12:50:21.067014 [debug]: Finished rendering [  0.04s] seed DBT_RAW.dim_account [success]
+12:50:21.067052 [debug]: Started analyzing seed DBT_RAW.dim_account
+12:50:21.067089 [info ]:  Succeeded [  0.04s] seed  DBT_RAW.dim_account (table)
+12:50:21.067104 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_account [success]
+12:50:21.067342 [debug]: Finished rendering [  0.04s] seed DBT_RAW.f_assumption_values [success]
+12:50:21.067387 [debug]: Started analyzing seed DBT_RAW.f_assumption_values
+12:50:21.067423 [info ]:  Succeeded [  0.04s] seed  DBT_RAW.f_assumption_values (table)
+12:50:21.067439 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.f_assumption_values [success]
+12:50:21.067967 [debug]: Finished rendering [  0.04s] seed DBT_RAW.dim_channel [success]
+12:50:21.068007 [debug]: Started analyzing seed DBT_RAW.dim_channel
+12:50:21.068041 [info ]:  Succeeded [  0.04s] seed  DBT_RAW.dim_channel (table)
+12:50:21.068054 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_channel [success]
+12:50:21.068444 [debug]: Finished rendering [  0.04s] seed DBT_RAW.dim_assumption [success]
+12:50:21.068479 [debug]: Started analyzing seed DBT_RAW.dim_assumption
+12:50:21.068517 [info ]:  Succeeded [  0.04s] seed  DBT_RAW.dim_assumption (table)
+12:50:21.068540 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_assumption [success]
+12:50:21.068561 [debug]: Finished rendering [  0.04s] seed DBT_RAW.dim_region [success]
+12:50:21.068576 [debug]: Started analyzing seed DBT_RAW.dim_region
+12:50:21.068607 [info ]:  Succeeded [  0.04s] seed  DBT_RAW.dim_region (table)
+12:50:21.068622 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_region [success]
+12:50:21.069128 [debug]: Finished rendering [  0.04s] seed DBT_RAW.t_access [success]
+12:50:21.069172 [debug]: Started analyzing seed DBT_RAW.t_access
+12:50:21.069220 [info ]:  Succeeded [  0.04s] seed  DBT_RAW.t_access (table)
+12:50:21.069233 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.t_access [success]
+12:50:21.070054 [debug]: Finished rendering [  0.05s] seed DBT_RAW.dim_product [success]
+12:50:21.070094 [debug]: Started analyzing seed DBT_RAW.dim_product
+12:50:21.070124 [info ]:  Succeeded [  0.04s] seed  DBT_RAW.dim_product (table)
+12:50:21.070139 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_product [success]
+12:50:21.072230 [debug]: Finished rendering [  0.05s] seed DBT_RAW.dim_customer [success]
+12:50:21.072277 [debug]: Started analyzing seed DBT_RAW.dim_customer
+12:50:21.072316 [info ]:  Succeeded [  0.05s] seed  DBT_RAW.dim_customer (table)
+12:50:21.072333 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_customer [success]
+12:50:21.073003 [debug]: Finished rendering [  0.05s] seed DBT_RAW.f_plan [success]
+12:50:21.073053 [debug]: Started analyzing seed DBT_RAW.f_plan
+12:50:21.073092 [info ]:  Succeeded [  0.05s] seed  DBT_RAW.f_plan (table)
+12:50:21.073107 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.f_plan [success]
+12:50:21.073123 [debug]: Finished rendering [  0.05s] seed DBT_RAW.dim_date [success]
+12:50:21.073142 [debug]: Started analyzing seed DBT_RAW.dim_date
+12:50:21.073182 [info ]:  Succeeded [  0.05s] seed  DBT_RAW.dim_date (table)
+12:50:21.073193 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_date [success]
+12:50:21.111953 [debug]: Finished rendering [  0.09s] seed DBT_RAW.f_gl_entry [success]
+12:50:21.112008 [debug]: Started analyzing seed DBT_RAW.f_gl_entry
+12:50:21.112043 [info ]:  Succeeded [  0.09s] seed  DBT_RAW.f_gl_entry (table)
+12:50:21.112059 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.f_gl_entry [success]
+12:50:21.128086 [debug]: Finished rendering [  0.10s] seed DBT_RAW.f_ap_invoice [success]
+12:50:21.128149 [debug]: Started analyzing seed DBT_RAW.f_ap_invoice
+12:50:21.128185 [info ]:  Succeeded [  0.10s] seed  DBT_RAW.f_ap_invoice (table)
+12:50:21.128199 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.f_ap_invoice [success]
+12:50:21.130651 [debug]: Finished rendering [  0.11s] seed DBT_RAW.f_bank_txn [success]
+12:50:21.130684 [debug]: Started analyzing seed DBT_RAW.f_bank_txn
+12:50:21.130711 [info ]:  Succeeded [  0.10s] seed  DBT_RAW.f_bank_txn (table)
+12:50:21.130728 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.f_bank_txn [success]
+12:50:21.208139 [debug]: Finished rendering [  0.18s] seed DBT_RAW.f_ar_invoice [success]
+12:50:21.208191 [debug]: Started analyzing seed DBT_RAW.f_ar_invoice
+12:50:21.208224 [info ]:  Succeeded [  0.18s] seed  DBT_RAW.f_ar_invoice (table)
+12:50:21.208240 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.f_ar_invoice [success]
+12:50:21.223216 [debug]: Finished rendering [  0.20s] seed DBT_RAW.f_sales_line [success]
+12:50:21.223266 [debug]: Started analyzing seed DBT_RAW.f_sales_line
+12:50:21.223315 [info ]:  Succeeded [  0.20s] seed  DBT_RAW.f_sales_line (table)
+12:50:21.223328 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.f_sales_line [success]
+12:50:21.223334 [info ]: Finished analyzing [  0.16s] (17 nodes, 0 skipped, 0 errors)
+12:53:08.748767 [info ]: Loading profiles.yml

@@ -8,7 +8,7 @@ with gl as (
     a.account_group,
     sum(amount) as amount
   from {{ ref('stg_nav_gl_entry') }} g
-  join {{ ref('dim_account') }} a on g.account_id = a.account_id
+  join {{ ref('dim_account_core') }} a on g.account_id = a.account_id
   where a.statement = 'P&L'
   group by 1,2,3
 ),
