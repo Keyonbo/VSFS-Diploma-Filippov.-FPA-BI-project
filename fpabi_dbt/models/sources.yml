@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: raw
+    database: FPABI
+    schema: RAW
+    tables:
+      - name: dim_date
+      - name: dim_entity
+      - name: dim_account
+      - name: dim_cost_center
+      - name: dim_product
+      - name: dim_channel
+      - name: dim_customer
+      - name: dim_region
+      - name: f_sales_line
+      - name: f_gl_entry
+      - name: f_ar_invoice
+      - name: f_ap_invoice
+      - name: f_bank_txn
+      - name: f_plan
+      - name: dim_assumption
+      - name: f_assumption_values
+      - name: t_access

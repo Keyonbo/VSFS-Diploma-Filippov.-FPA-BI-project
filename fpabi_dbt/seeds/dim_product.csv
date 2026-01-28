@@ -1,0 +1,7 @@
+product_id,product_code,product_name,product_category
+1,P001,Room - Standard,Room
+2,P002,Room - Deluxe,Room
+3,P003,Room - Suite,Room
+4,P004,Service - Breakfast,Service
+5,P005,Service - Parking,Service
+6,P006,Service - Spa,Service

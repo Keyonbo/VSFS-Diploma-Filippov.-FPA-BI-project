@@ -1,0 +1,12 @@
+version: 2
+
+exposures:
+  - name: powerbi_cfo_pack
+    type: dashboard
+    maturity: medium
+    url: https://app.powerbi.com/  # replace later
+    description: "CFO pack: weekly P&L, weekly PVM (NUP), 13-week cash inflow forecast."
+    depends_on:
+      - ref('mart_finance__pnl_weekly')
+      - ref('mart_finance__pvm_weekly')
+      - ref('mart_finance__cash_inflow_13w')

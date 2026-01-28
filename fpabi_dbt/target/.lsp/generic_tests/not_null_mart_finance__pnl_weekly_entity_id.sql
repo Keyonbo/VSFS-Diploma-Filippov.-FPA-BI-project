@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="entity_id", model=get_where_subquery(ref('mart_finance__pnl_weekly'))) }}

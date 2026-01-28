@@ -1,0 +1,13 @@
+account_id,account_code,account_name,statement,account_group
+1,4000,Revenue - Room,P&L,Revenue
+2,4010,Revenue - Services,P&L,Revenue
+3,5000,COGS - Cleaning,P&L,COGS
+4,5010,COGS - Amenities,P&L,COGS
+5,6000,OPEX - Payroll,P&L,OPEX
+6,6010,OPEX - Rent,P&L,OPEX
+7,6020,OPEX - Utilities,P&L,OPEX
+8,7000,Depreciation,P&L,OPEX
+9,1100,Cash,BS,Asset
+10,1200,Accounts Receivable,BS,Asset
+11,2100,Accounts Payable,BS,Liability
+12,3000,Equity,BS,Equity

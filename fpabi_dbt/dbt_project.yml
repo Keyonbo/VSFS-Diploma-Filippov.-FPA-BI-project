@@ -1,0 +1,28 @@
+name: fpabi
+version: '1.0.0'
+config-version: 2
+
+profile: fpabi
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  fpabi:
+    +materialized: view
+    staging:
+      +schema: STG
+    core:
+      +schema: CORE
+    marts:
+      +schema: MART
+      +materialized: table
+
+seeds:
+  fpabi:
+    +schema: RAW
+    +quote_columns: false

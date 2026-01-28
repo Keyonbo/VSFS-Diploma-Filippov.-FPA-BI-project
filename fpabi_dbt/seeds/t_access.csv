@@ -1,0 +1,6 @@
+user_upn,role,allowed_region_id,allowed_cost_center_id
+cfo@example.com,CFO,,
+controller_ops@example.com,Controller,,10
+sales_mgr_prg@example.com,SalesMgr,1,
+sales_mgr_brn@example.com,SalesMgr,2,
+admin@example.com,Admin,,

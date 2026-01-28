@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: fct_reservation
+    columns:
+      - name: reservation_id
+        tests: [not_null, unique]
+      - name: product_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_product')
+              field: product_id
+
+  - name: mart_finance__pnl_weekly
+    columns:
+      - name: week_start
+        tests: [not_null]
+      - name: entity_id
+        tests: [not_null]
+
+  - name: mart_finance__cash_inflow_13w
+    columns:
+      - name: week_start
+        tests: [not_null]
+      - name: forecast_cash_inflow
+        tests: [not_null]

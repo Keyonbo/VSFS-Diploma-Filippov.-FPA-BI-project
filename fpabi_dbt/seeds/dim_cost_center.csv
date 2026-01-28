@@ -1,0 +1,5 @@
+cost_center_id,cost_center_code,cost_center_name
+10,CC10,Operations
+20,CC20,Sales
+30,CC30,Administration
+40,CC40,IT

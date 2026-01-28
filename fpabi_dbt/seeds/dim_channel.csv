@@ -1,0 +1,5 @@
+channel_id,channel_code,channel_name
+1,WEB,Direct Web
+2,OTA,Online Travel Agency
+3,CORP,Corporate
+4,WALKIN,Walk-in
