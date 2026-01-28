@@ -1,13 +1,19 @@
 dbt-fusion 2.0.0-preview.32
    Loading profiles.yml
    Loading packages.yml
-    Passed [  0.82s] test  DBT_dbt_test__audit.not_null_mart_finance__pnl_weekly_entity_id
-    Passed [  1.38s] test  DBT_dbt_test__audit.not_null_mart_finance__cash_inflow_13w_week_start
-    Passed [  2.33s] test  DBT_dbt_test__audit.not_null_fct_reservation_product_id
-    Passed [  2.59s] test  DBT_dbt_test__audit.not_null_fct_reservation_reservation_id
-    Passed [  2.85s] test  DBT_dbt_test__audit.not_null_mart_finance__pnl_weekly_week_start
-    Passed [  3.28s] test  DBT_dbt_test__audit.not_null_mart_finance__cash_inflow_13w_forecast_cash_inflow
-    Passed [  3.48s] test  DBT_dbt_test__audit.unique_fct_reservation_reservation_id
-    Passed [  4.61s] test  DBT_dbt_test__audit.relationships_fct_reservation_3410d5884006139a52dc87bcdbadc931
-  Finished 'test' target 'dev' in 5s 32ms
+ Succeeded [  0.76s] model DBT_STG.stg_fin_access (view)
+ Succeeded [  1.05s] model DBT_CORE.dim_product_core (table)
+ Succeeded [  1.27s] model DBT_STG.stg_fin_plan (view)
+ Succeeded [  1.35s] model DBT_CORE.dim_account_core (table)
+ Succeeded [  1.61s] model DBT_STG.stg_fin_bank_txn (view)
+ Succeeded [  1.84s] model DBT_STG.stg_res_sales_line (view)
+ Succeeded [  2.09s] model DBT_STG.stg_nav_gl_entry (view)
+ Succeeded [  2.12s] model DBT_CORE.dim_date (table)
+ Succeeded [  0.98s] model DBT_CORE.fct_reservation (table)
+ Succeeded [  0.97s] model DBT_MART.mart_finance__pnl_weekly (table)
+ Succeeded [  1.09s] model DBT_MART.mart_finance__pnl_monthly (table)
+ Succeeded [  0.72s] model DBT_MART.mart_finance__pvm_monthly (table)
+ Succeeded [  1.94s] model DBT_MART.mart_finance__cash_inflow_13w (table)
+ Succeeded [  1.10s] model DBT_MART.mart_finance__pvm_weekly (table)
+  Finished 'run' target 'dev' in 5s 10ms
 New version available 2.0.0-preview.102 (run `dbt system update`)
