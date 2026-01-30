@@ -2,7 +2,7 @@
 
 -- Staging model for bank transactions (seeded CSV in this demo).
 with src as (
-  select * from FPABI.RAW.f_bank_txn
+  select * from FPABI.DBT_RAW.f_bank_txn
 )
 select
   bank_txn_id,

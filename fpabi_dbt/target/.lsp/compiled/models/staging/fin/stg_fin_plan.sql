@@ -2,7 +2,7 @@
 
 -- Staging model for plan/forecast lines (seeded CSV in this demo).
 with src as (
-  select * from FPABI.RAW.f_plan
+  select * from FPABI.DBT_RAW.f_plan
 )
 select
   plan_line_id,

@@ -7,4 +7,4 @@ select
   account_name,
   statement,
   account_group
-from FPABI.RAW.dim_account
+from FPABI.DBT_RAW.dim_account

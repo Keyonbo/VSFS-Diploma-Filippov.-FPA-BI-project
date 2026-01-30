@@ -2,7 +2,7 @@
 
 -- Staging model for NAV general ledger entries (seeded CSV in this demo).
 with src as (
-  select * from FPABI.RAW.f_gl_entry
+  select * from FPABI.DBT_RAW.f_gl_entry
 )
 select
   gl_entry_id,

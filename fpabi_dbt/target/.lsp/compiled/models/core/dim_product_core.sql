@@ -6,4 +6,4 @@ select
   product_code,
   product_name,
   product_category
-from FPABI.RAW.dim_product
+from FPABI.DBT_RAW.dim_product

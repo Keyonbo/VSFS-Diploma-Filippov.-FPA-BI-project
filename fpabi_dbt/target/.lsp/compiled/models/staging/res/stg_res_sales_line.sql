@@ -2,7 +2,7 @@
 
 -- Staging model for reservation system sales lines (seeded CSV in this demo).
 with src as (
-  select * from FPABI.RAW.f_sales_line
+  select * from FPABI.DBT_RAW.f_sales_line
 )
 select
   sales_line_id,

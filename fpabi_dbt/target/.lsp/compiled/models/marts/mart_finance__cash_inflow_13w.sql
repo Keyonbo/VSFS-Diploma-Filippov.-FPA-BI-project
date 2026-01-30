@@ -57,7 +57,7 @@ future_weeks as (
   from table(generator(rowcount => 13))
 ),
 entities as (
-  select distinct entity_id from FPABI.RAW.dim_entity
+  select distinct entity_id from FPABI.DBT_RAW.dim_entity
 ),
 scaffold as (
   select e.entity_id, f.week_start, weekofyear(f.week_start) as woy

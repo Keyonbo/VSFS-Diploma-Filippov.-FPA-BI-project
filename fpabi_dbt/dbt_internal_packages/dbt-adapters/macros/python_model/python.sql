@@ -9,6 +9,8 @@
 {%- endmacro -%}
 
 -- funcsign: (model) -> string
+
+
 {% macro build_ref_function(model) %}
 
     {%- set ref_dict = {} -%}
@@ -101,7 +103,7 @@ class this:
 
 
 class dbtObj:
-    def __init__(self, load_df_function) -> string:
+    def __init__(self, load_df_function) -> None:
         self.source = lambda *args: source(*args, dbt_load_df_function=load_df_function)
         self.ref = lambda *args, **kwargs: ref(*args, **kwargs, dbt_load_df_function=load_df_function)
         self.config = config
@@ -112,6 +114,6 @@ class dbtObj:
 {{py_script_comment()}}
 {% endmacro %}
 
-{#-- entry point for add instuctions for running compiled_code --#}
+#-- entry point for add instuctions for running compiled_code --#}
 {%macro py_script_comment()%}
 {%endmacro%}
