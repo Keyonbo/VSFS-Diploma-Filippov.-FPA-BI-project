@@ -101,7 +101,7 @@ class this:
 
 
 class dbtObj:
-    def __init__(self, load_df_function) -> string:
+    def __init__(self, load_df_function) -> None:
         self.source = lambda *args: source(*args, dbt_load_df_function=load_df_function)
         self.ref = lambda *args, **kwargs: ref(*args, **kwargs, dbt_load_df_function=load_df_function)
         self.config = config

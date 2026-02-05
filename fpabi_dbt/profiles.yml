@@ -3,9 +3,9 @@ fpabi:
   outputs:
     dev:
       type: snowflake
-      account: "ctqlryr-ea47137"
-      user: "DBT_USER2"
-      password: "W8!kR2#pL9@xS4nD1hQ7"
+      account: "past_your_snowflake_id_here" 
+      user: "past_your_snowflake_user_here"
+      password: "past_your_snowflake_user_password_here"
       role: "FPABI_DBT_ROLE"
       warehouse: "FPABI_WH"
       database: "FPABI"
