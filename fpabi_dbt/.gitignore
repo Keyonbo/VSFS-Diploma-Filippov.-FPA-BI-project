@@ -1,2 +1,7 @@
-
-dbt_internal_packages/
+target/
+dbt_packages/
+logs/
+*.log
+profiles.yml
+.env
+.DS_Store

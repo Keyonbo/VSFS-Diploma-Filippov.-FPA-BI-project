@@ -1249,3 +1249,247 @@ describe table "FPABI"."DBT_RAW"."T_ACCESS"
 13:40:30.624156 [debug]: Finished analyzing [  0.01s] model DBT_MART.mart_finance__pvm_monthly [success]
 13:40:30.642346 [info ]:  Succeeded [  0.03s] model DBT_MART.mart_finance__pvm_weekly (table)
 13:40:30.642382 [debug]: Finished analyzing [  0.03s] model DBT_MART.mart_finance__pvm_weekly [success]
+==================== 2026-02-05T13:49:26.265351Z | 0b54dfab-de36-46f5-8e48-a731f1ef9160 ====================
+13:49:26.265498 [info ]: Starting dbt LSP server
+13:49:26.265565 [info ]: Connecting to LSP client on port 8000
+13:49:26.269427 [info ]: Successfully connected to LSP client
+13:49:26.269475 [info ]: Creating LSP service...
+13:49:26.332916 [info ]: Creating LSP server...
+13:49:26.332950 [info ]: Starting LSP server...
+13:49:26.370468 [info ]: Started loading project
+13:49:26.376981 [info ]: Loading profiles.yml
+13:49:26.416781 [debug]:    Started loading packages
+13:49:26.436392 [debug]:     Loaded [  0.02s] packages
+13:49:26.436468 [debug]:    Started loading internal packages
+13:49:26.464807 [debug]:     Loaded [  0.03s] internal packages
+13:49:26.465251 [info ]: Started parsing
+13:49:26.529927 [info ]: Finished loading project [  0.16s]
+13:49:26.558172 [debug]: Finished parsing models\core\dim_account_core.sql [  0.00s]
+13:49:26.558995 [debug]: Finished parsing models\core\dim_date.sql [  0.00s]
+13:49:26.560044 [debug]: Finished parsing models\core\dim_product_core.sql [  0.00s]
+13:49:26.560736 [debug]: Finished parsing models\core\fct_reservation.sql [  0.00s]
+13:49:26.561268 [debug]: Finished parsing models\marts\mart_finance__cash_inflow_13w.sql [  0.00s]
+13:49:26.562195 [debug]: Finished parsing models\marts\mart_finance__pnl_monthly.sql [  0.00s]
+13:49:26.563092 [debug]: Finished parsing models\marts\mart_finance__pnl_weekly.sql [  0.00s]
+13:49:26.563890 [debug]: Finished parsing models\marts\mart_finance__pvm_monthly.sql [  0.00s]
+13:49:26.564941 [debug]: Finished parsing models\marts\mart_finance__pvm_weekly.sql [  0.00s]
+13:49:26.566051 [debug]: Finished parsing models\staging\fin\stg_fin_access.sql [  0.00s]
+13:49:26.567114 [debug]: Finished parsing models\staging\fin\stg_fin_bank_txn.sql [  0.00s]
+13:49:26.568625 [debug]: Finished parsing models\staging\fin\stg_fin_plan.sql [  0.00s]
+13:49:26.569515 [debug]: Finished parsing models\staging\nav\stg_nav_gl_entry.sql [  0.00s]
+13:49:26.584630 [debug]: Finished parsing models\staging\res\stg_res_sales_line.sql [  0.02s]
+13:49:26.585963 [debug]: Finished parsing target\generic_tests\not_null_fct_reservation_product_id.sql [  0.00s]
+13:49:26.586623 [debug]: Finished parsing target\generic_tests\relationships_fct_reservation_3410d5884006139a52dc87bcdbadc931.sql [  0.00s]
+13:49:26.587625 [debug]: Finished parsing target\generic_tests\not_null_fct_reservation_reservation_id.sql [  0.00s]
+13:49:26.588683 [debug]: Finished parsing target\generic_tests\unique_fct_reservation_reservation_id.sql [  0.00s]
+13:49:26.590004 [debug]: Finished parsing target\generic_tests\not_null_mart_finance__cash_inflow_13w_forecast_cash_inflow.sql [  0.00s]
+13:49:26.591321 [debug]: Finished parsing target\generic_tests\not_null_mart_finance__cash_inflow_13w_week_start.sql [  0.00s]
+13:49:26.593617 [debug]: Finished parsing target\generic_tests\not_null_mart_finance__pnl_weekly_entity_id.sql [  0.00s]
+13:49:26.598780 [debug]: Finished parsing target\generic_tests\not_null_mart_finance__pnl_weekly_week_start.sql [  0.01s]
+13:49:26.599935 [info ]: Finished parsing [  0.13s]
+13:49:26.601495 [info ]: Cached model count updated: 14 models (estimate)
+13:49:26.601522 [info ]: Cached model count updated: 14 models (accurate)
+13:49:26.601638 [info ]: Started scheduling
+13:49:26.602074 [info ]: Finished scheduling [  0.00s]
+13:49:26.602302 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "FPABI", schema: "DBT_RAW", table: "DIM_ACCOUNT" }) and interval: None
+13:49:26.602394 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "FPABI", schema: "DBT_RAW", table: "T_ACCESS" }) and interval: None
+13:49:26.602425 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "FPABI", schema: "DBT_RAW", table: "DIM_DATE" }) and interval: None
+13:49:26.602452 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "FPABI", schema: "DBT_RAW", table: "DIM_PRODUCT" }) and interval: None
+13:49:26.602478 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "FPABI", schema: "DBT_RAW", table: "F_GL_ENTRY" }) and interval: None
+13:49:26.602502 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "FPABI", schema: "DBT_RAW", table: "F_SALES_LINE" }) and interval: None
+13:49:26.602528 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "FPABI", schema: "DBT_RAW", table: "F_PLAN" }) and interval: None
+13:49:26.602555 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "FPABI", schema: "DBT_RAW", table: "F_BANK_TXN" }) and interval: None
+13:49:26.602580 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "FPABI", schema: "DBT_RAW", table: "DIM_ENTITY" }) and interval: None
+13:49:26.604090 [info ]: Started deferring state
+13:49:26.604154 [info ]: Finished deferring state [  0.00s]
+13:49:26.606964 [info ]: Started downloading schemas
+13:49:26.607150 [debug]: Started downloading relations
+13:49:26.607424 [debug]: Finished downloading relations [  0.00s]
+13:49:26.607467 [info ]: Finished downloading schemas [  0.00s]
+13:49:26.842917 [info ]: Started building task graph
+13:49:26.843306 [info ]: Finished building task graph [  0.00s]
+13:49:26.843636 [info ]: Started rendering (31 nodes)
+13:49:26.843685 [info ]: Started seed DBT_RAW.t_access
+13:49:26.843712 [debug]: Started rendering seed DBT_RAW.t_access
+13:49:26.843741 [info ]: Started seed DBT_RAW.f_sales_line
+13:49:26.843746 [debug]: Started rendering seed DBT_RAW.f_sales_line
+13:49:26.843761 [info ]: Started seed DBT_RAW.f_plan
+13:49:26.843765 [debug]: Started rendering seed DBT_RAW.f_plan
+13:49:26.843771 [info ]: Started seed DBT_RAW.f_gl_entry
+13:49:26.843774 [debug]: Started rendering seed DBT_RAW.f_gl_entry
+13:49:26.843780 [info ]: Started seed DBT_RAW.f_bank_txn
+13:49:26.843783 [debug]: Started rendering seed DBT_RAW.f_bank_txn
+13:49:26.843788 [info ]: Started seed DBT_RAW.f_assumption_values
+13:49:26.843793 [debug]: Started rendering seed DBT_RAW.f_assumption_values
+13:49:26.843798 [info ]: Started seed DBT_RAW.f_ar_invoice
+13:49:26.843800 [debug]: Started rendering seed DBT_RAW.f_ar_invoice
+13:49:26.843805 [info ]: Started seed DBT_RAW.f_ap_invoice
+13:49:26.843808 [debug]: Started rendering seed DBT_RAW.f_ap_invoice
+13:49:26.843813 [info ]: Started seed DBT_RAW.dim_region
+13:49:26.843816 [debug]: Started rendering seed DBT_RAW.dim_region
+13:49:26.843822 [info ]: Started seed DBT_RAW.dim_product
+13:49:26.843826 [debug]: Started rendering seed DBT_RAW.dim_product
+13:49:26.843830 [info ]: Started seed DBT_RAW.dim_entity
+13:49:26.843833 [debug]: Started rendering seed DBT_RAW.dim_entity
+13:49:26.843838 [info ]: Started seed DBT_RAW.dim_date
+13:49:26.843841 [debug]: Started rendering seed DBT_RAW.dim_date
+13:49:26.843845 [info ]: Started seed DBT_RAW.dim_customer
+13:49:26.843847 [debug]: Started rendering seed DBT_RAW.dim_customer
+13:49:26.843852 [info ]: Started seed DBT_RAW.dim_cost_center
+13:49:26.843854 [debug]: Started rendering seed DBT_RAW.dim_cost_center
+13:49:26.843859 [info ]: Started seed DBT_RAW.dim_channel
+13:49:26.843862 [debug]: Started rendering seed DBT_RAW.dim_channel
+13:49:26.843869 [info ]: Started seed DBT_RAW.dim_assumption
+13:49:26.843873 [debug]: Started rendering seed DBT_RAW.dim_assumption
+13:49:26.843877 [info ]: Started seed DBT_RAW.dim_account
+13:49:26.843881 [debug]: Started rendering seed DBT_RAW.dim_account
+13:49:26.863939 [debug]: Finished rendering [  0.02s] seed DBT_RAW.dim_channel [success]
+13:49:26.864020 [info ]: Started analyzing (31 nodes)
+13:49:26.864036 [debug]: Started analyzing seed DBT_RAW.dim_channel
+13:49:26.864057 [debug]: Finished rendering [  0.02s] seed DBT_RAW.dim_assumption [success]
+13:49:26.864067 [debug]: Started analyzing seed DBT_RAW.dim_assumption
+13:49:26.864078 [debug]: Finished rendering [  0.02s] seed DBT_RAW.dim_account [success]
+13:49:26.864085 [debug]: Started analyzing seed DBT_RAW.dim_account
+13:49:26.864167 [info ]:  Succeeded [  0.02s] seed  DBT_RAW.dim_account (table)
+13:49:26.864192 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_account [success]
+13:49:26.864211 [info ]: Started model DBT_CORE.dim_account_core
+13:49:26.864218 [debug]: Started rendering model DBT_CORE.dim_account_core
+13:49:26.864236 [info ]:  Succeeded [  0.02s] seed  DBT_RAW.dim_channel (table)
+13:49:26.864244 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_channel [success]
+13:49:26.864258 [info ]:  Succeeded [  0.02s] seed  DBT_RAW.dim_assumption (table)
+13:49:26.864264 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_assumption [success]
+13:49:26.864708 [debug]: Finished rendering [  0.02s] seed DBT_RAW.dim_region [success]
+13:49:26.864758 [debug]: Started analyzing seed DBT_RAW.dim_region
+13:49:26.864803 [info ]:  Succeeded [  0.02s] seed  DBT_RAW.dim_region (table)
+13:49:26.864821 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_region [success]
+13:49:26.864836 [debug]: Finished rendering [  0.02s] seed DBT_RAW.dim_product [success]
+13:49:26.864847 [debug]: Started analyzing seed DBT_RAW.dim_product
+13:49:26.864872 [info ]:  Succeeded [  0.02s] seed  DBT_RAW.dim_product (table)
+13:49:26.864882 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_product [success]
+13:49:26.864896 [info ]: Started model DBT_CORE.dim_product_core
+13:49:26.864981 [debug]: Started rendering model DBT_CORE.dim_product_core
+13:49:26.865329 [debug]: Finished rendering [  0.02s] seed DBT_RAW.dim_cost_center [success]
+13:49:26.865367 [debug]: Started analyzing seed DBT_RAW.dim_cost_center
+13:49:26.865394 [debug]: Finished rendering [  0.02s] seed DBT_RAW.t_access [success]
+13:49:26.865406 [debug]: Started analyzing seed DBT_RAW.t_access
+13:49:26.865432 [info ]:  Succeeded [  0.02s] seed  DBT_RAW.t_access (table)
+13:49:26.865447 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.t_access [success]
+13:49:26.865462 [info ]: Started model DBT_STG.stg_fin_access
+13:49:26.865471 [debug]: Started rendering model DBT_STG.stg_fin_access
+13:49:26.865489 [debug]: Finished rendering [  0.02s] seed DBT_RAW.dim_entity [success]
+13:49:26.865499 [debug]: Started analyzing seed DBT_RAW.dim_entity
+13:49:26.865519 [info ]:  Succeeded [  0.02s] seed  DBT_RAW.dim_cost_center (table)
+13:49:26.865528 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_cost_center [success]
+13:49:26.865676 [info ]:  Succeeded [  0.02s] seed  DBT_RAW.dim_entity (table)
+13:49:26.865695 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_entity [success]
+13:49:26.866444 [debug]: Finished rendering [  0.02s] seed DBT_RAW.f_assumption_values [success]
+13:49:26.866495 [debug]: Started analyzing seed DBT_RAW.f_assumption_values
+13:49:26.866539 [info ]:  Succeeded [  0.02s] seed  DBT_RAW.f_assumption_values (table)
+13:49:26.866557 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.f_assumption_values [success]
+13:49:26.867720 [debug]: Finished rendering [  0.00s] model DBT_CORE.dim_account_core [success]
+13:49:26.867769 [debug]: Started analyzing model DBT_CORE.dim_account_core
+13:49:26.868058 [debug]: Finished rendering [  0.00s] model DBT_CORE.dim_product_core [success]
+13:49:26.868568 [debug]: Started analyzing model DBT_CORE.dim_product_core
+13:49:26.868601 [debug]: Finished rendering [  0.00s] model DBT_STG.stg_fin_access [success]
+13:49:26.868617 [debug]: Started analyzing model DBT_STG.stg_fin_access
+13:49:26.868867 [debug]: Finished rendering [  0.03s] seed DBT_RAW.dim_date [success]
+13:49:26.868911 [debug]: Started analyzing seed DBT_RAW.dim_date
+13:49:26.868932 [debug]: Finished rendering [  0.03s] seed DBT_RAW.f_plan [success]
+13:49:26.868945 [debug]: Started analyzing seed DBT_RAW.f_plan
+13:49:26.868977 [info ]:  Succeeded [  0.03s] seed  DBT_RAW.f_plan (table)
+13:49:26.869001 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.f_plan [success]
+13:49:26.869017 [info ]: Started model DBT_STG.stg_fin_plan
+13:49:26.869028 [debug]: Started rendering model DBT_STG.stg_fin_plan
+13:49:26.869052 [info ]:  Succeeded [  0.03s] seed  DBT_RAW.dim_date (table)
+13:49:26.869062 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_date [success]
+13:49:26.869074 [info ]: Started model DBT_CORE.dim_date
+13:49:26.869081 [debug]: Started rendering model DBT_CORE.dim_date
+13:49:26.869962 [debug]: Finished rendering [  0.03s] seed DBT_RAW.dim_customer [success]
+13:49:26.870011 [debug]: Started analyzing seed DBT_RAW.dim_customer
+13:49:26.870060 [info ]:  Succeeded [  0.03s] seed  DBT_RAW.dim_customer (table)
+13:49:26.870087 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.dim_customer [success]
+13:49:26.871181 [debug]: Started analyzing model DBT_STG.stg_fin_plan
+13:49:26.871207 [debug]: Finished rendering [  0.00s] model DBT_STG.stg_fin_plan [success]
+13:49:26.910372 [debug]: Finished rendering [  0.07s] seed DBT_RAW.f_gl_entry [success]
+13:49:26.910453 [debug]: Started analyzing seed DBT_RAW.f_gl_entry
+13:49:26.910521 [info ]:  Succeeded [  0.07s] seed  DBT_RAW.f_gl_entry (table)
+13:49:26.910543 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.f_gl_entry [success]
+13:49:26.910560 [info ]: Started model DBT_STG.stg_nav_gl_entry
+13:49:26.910569 [debug]: Started rendering model DBT_STG.stg_nav_gl_entry
+13:49:26.912310 [debug]: Started analyzing model DBT_STG.stg_nav_gl_entry
+13:49:26.912306 [debug]: Finished rendering [  0.00s] model DBT_STG.stg_nav_gl_entry [success]
+13:49:26.918613 [info ]: Loading profiles.yml
+13:49:26.919018 [info ]:  Succeeded [  0.05s] model DBT_CORE.dim_product_core (table)
+13:49:26.919057 [debug]: Finished analyzing [  0.05s] model DBT_CORE.dim_product_core [success]
+13:49:26.919078 [info ]:  Succeeded [  0.05s] model DBT_CORE.dim_account_core (table)
+13:49:26.919091 [debug]: Finished analyzing [  0.05s] model DBT_CORE.dim_account_core [success]
+13:49:26.919220 [info ]:  Succeeded [  0.05s] model DBT_STG.stg_fin_access (view)
+13:49:26.919246 [debug]: Finished analyzing [  0.05s] model DBT_STG.stg_fin_access [success]
+13:49:26.921737 [info ]:  Succeeded [  0.05s] model DBT_STG.stg_fin_plan (view)
+13:49:26.921780 [debug]: Finished analyzing [  0.05s] model DBT_STG.stg_fin_plan [success]
+13:49:26.922949 [info ]:  Succeeded [  0.01s] model DBT_STG.stg_nav_gl_entry (view)
+13:49:26.922977 [debug]: Finished analyzing [  0.01s] model DBT_STG.stg_nav_gl_entry [success]
+13:49:26.922998 [info ]: Started model DBT_MART.mart_finance__pnl_weekly
+13:49:26.923007 [debug]: Started rendering model DBT_MART.mart_finance__pnl_weekly
+13:49:26.923026 [info ]: Started model DBT_MART.mart_finance__pnl_monthly
+13:49:26.923031 [debug]: Started rendering model DBT_MART.mart_finance__pnl_monthly
+13:49:26.925287 [debug]: Started analyzing model DBT_MART.mart_finance__pnl_monthly
+13:49:26.925293 [debug]: Finished rendering [  0.00s] model DBT_MART.mart_finance__pnl_monthly [success]
+13:49:26.925386 [debug]: Started analyzing model DBT_MART.mart_finance__pnl_weekly
+13:49:26.925395 [debug]: Finished rendering [  0.00s] model DBT_MART.mart_finance__pnl_weekly [success]
+13:49:26.954214 [debug]: Finished rendering [  0.11s] seed DBT_RAW.f_ap_invoice [success]
+13:49:26.954275 [debug]: Started analyzing seed DBT_RAW.f_ap_invoice
+13:49:26.954310 [info ]:  Succeeded [  0.11s] seed  DBT_RAW.f_ap_invoice (table)
+13:49:26.954326 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.f_ap_invoice [success]
+13:49:26.966013 [debug]: Finished rendering [  0.12s] seed DBT_RAW.f_bank_txn [success]
+13:49:26.966059 [debug]: Started analyzing seed DBT_RAW.f_bank_txn
+13:49:26.966090 [info ]:  Succeeded [  0.12s] seed  DBT_RAW.f_bank_txn (table)
+13:49:26.966105 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.f_bank_txn [success]
+13:49:26.966117 [info ]: Started model DBT_STG.stg_fin_bank_txn
+13:49:26.966124 [debug]: Started rendering model DBT_STG.stg_fin_bank_txn
+13:49:26.968469 [debug]: Finished rendering [  0.00s] model DBT_STG.stg_fin_bank_txn [success]
+13:49:26.968521 [debug]: Started analyzing model DBT_STG.stg_fin_bank_txn
+13:49:26.970561 [info ]:  Succeeded [  0.05s] model DBT_MART.mart_finance__pnl_monthly (table)
+13:49:26.970611 [debug]: Finished analyzing [  0.05s] model DBT_MART.mart_finance__pnl_monthly [success]
+13:49:26.971457 [info ]:  Succeeded [  0.00s] model DBT_STG.stg_fin_bank_txn (view)
+13:49:26.971494 [debug]: Finished analyzing [  0.00s] model DBT_STG.stg_fin_bank_txn [success]
+13:49:26.971524 [info ]: Started model DBT_MART.mart_finance__cash_inflow_13w
+13:49:26.971542 [debug]: Started rendering model DBT_MART.mart_finance__cash_inflow_13w
+13:49:26.973818 [debug]: Finished rendering [  0.00s] model DBT_MART.mart_finance__cash_inflow_13w [success]
+13:49:26.973878 [debug]: Started analyzing model DBT_MART.mart_finance__cash_inflow_13w
+13:49:26.992801 [info ]:  Succeeded [  0.07s] model DBT_MART.mart_finance__pnl_weekly (table)
+13:49:26.992854 [debug]: Finished analyzing [  0.07s] model DBT_MART.mart_finance__pnl_weekly [success]
+13:49:27.065705 [info ]:  Succeeded [  0.09s] model DBT_MART.mart_finance__cash_inflow_13w (table)
+13:49:27.065757 [debug]: Finished analyzing [  0.09s] model DBT_MART.mart_finance__cash_inflow_13w [success]
+13:49:27.069899 [debug]: Finished rendering [  0.23s] seed DBT_RAW.f_ar_invoice [success]
+13:49:27.069954 [debug]: Started analyzing seed DBT_RAW.f_ar_invoice
+13:49:27.069988 [info ]:  Succeeded [  0.23s] seed  DBT_RAW.f_ar_invoice (table)
+13:49:27.070002 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.f_ar_invoice [success]
+13:49:27.091291 [debug]: Finished rendering [  0.25s] seed DBT_RAW.f_sales_line [success]
+13:49:27.091346 [debug]: Started analyzing seed DBT_RAW.f_sales_line
+13:49:27.091380 [info ]:  Succeeded [  0.25s] seed  DBT_RAW.f_sales_line (table)
+13:49:27.091396 [debug]: Finished analyzing [  0.00s] seed DBT_RAW.f_sales_line [success]
+13:49:27.091408 [info ]: Started model DBT_STG.stg_res_sales_line
+13:49:27.091418 [debug]: Started rendering model DBT_STG.stg_res_sales_line
+13:49:27.093727 [debug]: Finished rendering [  0.00s] model DBT_STG.stg_res_sales_line [success]
+13:49:27.093769 [debug]: Started analyzing model DBT_STG.stg_res_sales_line
+13:49:27.096466 [info ]:  Succeeded [  0.00s] model DBT_STG.stg_res_sales_line (view)
+13:49:27.096504 [debug]: Finished analyzing [  0.00s] model DBT_STG.stg_res_sales_line [success]
+13:49:27.096531 [info ]: Started model DBT_CORE.fct_reservation
+13:49:27.096544 [debug]: Started rendering model DBT_CORE.fct_reservation
+13:49:27.098408 [debug]: Started analyzing model DBT_CORE.fct_reservation
+13:49:27.098413 [debug]: Finished rendering [  0.00s] model DBT_CORE.fct_reservation [success]
+13:49:27.102731 [info ]:  Succeeded [  0.01s] model DBT_CORE.fct_reservation (table)
+13:49:27.102765 [debug]: Finished analyzing [  0.00s] model DBT_CORE.fct_reservation [success]
+13:49:27.102792 [info ]: Started model DBT_MART.mart_finance__pvm_weekly
+13:49:27.102802 [debug]: Started rendering model DBT_MART.mart_finance__pvm_weekly
+13:49:27.102821 [info ]: Started model DBT_MART.mart_finance__pvm_monthly
+13:49:27.102826 [debug]: Started rendering model DBT_MART.mart_finance__pvm_monthly
+13:49:27.104928 [debug]: Finished rendering [  0.00s] model DBT_MART.mart_finance__pvm_monthly [success]
+13:49:27.104976 [debug]: Started analyzing model DBT_MART.mart_finance__pvm_monthly
+13:49:27.105006 [debug]: Finished rendering [  0.00s] model DBT_MART.mart_finance__pvm_weekly [success]
+13:49:27.105018 [debug]: Started analyzing model DBT_MART.mart_finance__pvm_weekly
+13:49:27.111126 [info ]:  Succeeded [  0.01s] model DBT_MART.mart_finance__pvm_monthly (table)
+13:49:27.111164 [debug]: Finished analyzing [  0.01s] model DBT_MART.mart_finance__pvm_monthly [success]
+13:49:27.131768 [info ]:  Succeeded [  0.03s] model DBT_MART.mart_finance__pvm_weekly (table)
+13:49:27.131823 [debug]: Finished analyzing [  0.03s] model DBT_MART.mart_finance__pvm_weekly [success]
