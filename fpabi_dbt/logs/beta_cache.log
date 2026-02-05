@@ -1,27 +1,15 @@
 
 === RelationCache Final State ===
-Total Schemas: 3
-
-[COMPLETE] SCHEMA
-   ╭─ Name: "FPABI"."DBT_CORE"
-   ├─ Relations: 4
-   ├─ Cached: 1769613868397ms
-   ╰─ Status: All relations cached as a batch
+Total Schemas: 1
 
 [COMPLETE] SCHEMA
    ╭─ Name: "FPABI"."DBT_MART"
    ├─ Relations: 5
-   ├─ Cached: 1769613869027ms
-   ╰─ Status: All relations cached as a batch
-
-[COMPLETE] SCHEMA
-   ╭─ Name: "FPABI"."DBT_STG"
-   ├─ Relations: 5
-   ├─ Cached: 1769613868819ms
+   ├─ Cached: 1770296156020ms
    ╰─ Status: All relations cached as a batch
 
 === Summary ===
-Complete Schemas: 3
+Complete Schemas: 1
 Partial Schemas: 0
-Total Relations: 14
+Total Relations: 5
 

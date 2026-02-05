@@ -13,6 +13,7 @@ select
   entity_id,
   customer_id,
   product_id,
+  entity_id,
   channel_id,
   qty,
   revenue_amount,

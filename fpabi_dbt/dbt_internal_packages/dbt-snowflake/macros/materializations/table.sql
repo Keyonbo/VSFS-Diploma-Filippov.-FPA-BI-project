@@ -9,13 +9,12 @@
 
   {%- set existing_relation = adapter.get_relation(database=database, schema=schema, identifier=identifier) -%}
 
-  {%- set catalog_relation = adapter.build_catalog_relation(config.model) -%}
   {%- set target_relation = api.Relation.create(
 	identifier=identifier,
 	schema=schema,
 	database=database,
 	type='table',
-	table_format=catalog_relation.table_format
+	table_format=config.get('table_format', 'default')
    ) -%}
 
   {{ run_hooks(pre_hooks) }}

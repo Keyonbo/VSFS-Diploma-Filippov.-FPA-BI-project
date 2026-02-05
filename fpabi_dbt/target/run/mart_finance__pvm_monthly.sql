@@ -12,16 +12,18 @@
 with monthly as (
     select
         date_trunc('month', reservation_date) as month_start,
+        entity_id,
         product_id,
         sum(qty) as reservations_value,
         sum(revenue_amount) as revenue_value
     from FPABI.DBT_CORE.fct_reservation
-    group by 1, 2
+    group by 1, 2, 3
 ),
 
 unpvt as (
     select
         month_start,
+        entity_id,
         product_id,
         'Reservations' as account,
         reservations_value as value
@@ -31,6 +33,7 @@ unpvt as (
 
     select
         month_start,
+        entity_id,
         product_id,
         'Revenue' as account,
         revenue_value as value
@@ -43,6 +46,7 @@ select
     month(month_start) as month,
     year(month_start) as year,
     product_id as product,
+    entity_id as entity,
     month_start
 from unpvt
         );

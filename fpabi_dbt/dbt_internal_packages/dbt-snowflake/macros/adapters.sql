@@ -103,12 +103,7 @@
     {%- else -%}
         {%- set relation_type = relation.type -%}
     {%- endif -%}
-
-    {%- if relation.is_iceberg_format() -%}
-        alter iceberg table {{ relation.render() }} set comment = $${{ relation_comment | replace('$', '[$]') }}$$;
-    {%- else -%}
-        comment on {{ relation_type }} {{ relation.render() }} IS $${{ relation_comment | replace('$', '[$]') }}$$;
-    {%- endif -%}
+    comment on {{ relation_type }} {{ relation.render() }} IS $${{ relation_comment | replace('$', '[$]') }}$$;
 {% endmacro %}
 
 -- funcsign: (relation, dict[string, model]) -> string
@@ -166,35 +161,6 @@
   {% endif %}
 {% endmacro %}
 
-{% macro snowflake__get_column_data_type_for_alter(relation, column) %}
-  {#
-    Helper macro to get the correct data type for ALTER TABLE operations.
-    For Iceberg tables, we need to handle VARCHAR constraints differently because
-    Snowflake Iceberg tables only support max length (134,217,728) or STRING directly.
-
-    This fixes the bug where dbt generates VARCHAR(16777216) for new columns which
-    is not supported by Snowflake Iceberg tables.
-  #}
-  {% if relation.is_iceberg_format() and column.is_string() %}
-    {% set data_type = column.data_type.upper() %}
-    {% if data_type.startswith('CHARACTER VARYING') or data_type.startswith('VARCHAR') %}
-      {#
-        For Iceberg tables, convert any VARCHAR specification to STRING.
-        This handles cases where:
-        - dbt auto-generates VARCHAR(16777216) for columns without explicit size
-        - users specify VARCHAR with any size (even the max 134217728)
-        Using STRING is more compatible and avoids size-related errors.
-      #}
-      STRING
-    {% else %}
-      {# Keep other string types like TEXT as-is #}
-      {{ column.data_type }}
-    {% endif %}
-  {% else %}
-    {{ column.data_type }}
-  {% endif %}
-{% endmacro %}
-
 -- funcsign: (relation, optional[list[base_column]], optional[list[base_column]]) -> string
 {% macro snowflake__alter_relation_add_remove_columns(relation, add_columns, remove_columns) %}
 
@@ -209,7 +175,7 @@
     {% set sql -%}
        alter {{ relation.get_ddl_prefix_for_alter() }} {{ relation_type }} {{ relation.render() }} add column
           {% for column in add_columns %}
-            {{ adapter.quote(column.name) }} {{ snowflake__get_column_data_type_for_alter(relation, column) }}{{ ',' if not loop.last }}
+            {{ column.name }} {{ column.data_type }}{{ ',' if not loop.last }}
           {% endfor %}
     {%- endset -%}
 
@@ -222,7 +188,7 @@
     {% set sql -%}
         alter {{ relation.get_ddl_prefix_for_alter() }} {{ relation_type }} {{ relation.render() }} drop column
             {% for column in remove_columns %}
-                {{ adapter.quote(column.name) }}{{ ',' if not loop.last }}
+                {{ column.name }}{{ ',' if not loop.last }}
             {% endfor %}
     {%- endset -%}
 
@@ -232,26 +198,6 @@
 
 {% endmacro %}
 
-{% macro snowflake__is_catalog_linked_database(relation=none, catalog_relation=none) -%}
-    {#-- Helper macro to detect if we're in a catalog-linked database context --#}
-    {#-- CORE DISCREPANCY: there's supposed to be a relation.catalog based arm here. This is a core
-      -- hack that won't work in Fusion. #}
-    {%- if catalog_relation is not none -%}
-        {#-- Direct catalog_relation object provided --#}
-        {%- if catalog_relation|attr('catalog_linked_database') -%}
-            {{ return(true) }}
-        {%- else -%}
-            {{ return(false) }}
-        {%- endif -%}
-    {%- elif relation and relation.config -%}
-        {%- set catalog_relation = adapter.build_catalog_relation(relation) -%}
-        {%- if catalog_relation is not none and catalog_relation|attr('catalog_linked_database') -%}
-            {{ return(true) }}
-        {%- else -%}
-            {{ return(false) }}
-        {%- endif -%}
-    {%- endif -%}
-{%- endmacro %}
 
 -- funcsign: (string) -> string
 {% macro snowflake_dml_explicit_transaction(dml) %}
@@ -276,79 +222,6 @@
     truncate table {{ relation.render() }}
   {% endset %}
   {% call statement('truncate_relation') -%}
-    {% if snowflake__is_catalog_linked_database(relation=config.model) %}
-        {{ truncate_dml }}
-    {% else %}
-      {{ snowflake_dml_explicit_transaction(truncate_dml) }}
-    {% endif %}
+    {{ snowflake_dml_explicit_transaction(truncate_dml) }}
   {%- endcall %}
 {% endmacro %}
-
-{% macro snowflake__test_aggregated_unique(model, column_names) %}
-{% set skip_column_names = aggregated_test_skip_column_names | default([]) %}
-{% set filtered_columns = [] %}
-
-{% for column_name in column_names %}
-    {% if column_name not in skip_column_names %}
-        {% do filtered_columns.append(column_name) %}
-    {% endif %}
-{% endfor %}
-{% if filtered_columns %}
-select
-    case
-        {%- for column_name in filtered_columns %}
-        when grouping({{ column_name }}) = 0 then '{{ column_name }}'
-        {%- endfor %}
-    end as column_name,
-    coalesce({{ filtered_columns | join(', ') }}) as unique_field,
-    count(*) as n_records
-from {{ model }}
-where {{ filtered_columns | join(' is not null or ') }} is not null
-group by grouping sets (
-    {%- for column_name in filtered_columns -%}
-    ({{ column_name }})
-    {%- if not loop.last -%}, {% endif -%}
-    {%- endfor -%}
-)
-having count(*) > 1
-   and coalesce({{ filtered_columns | join(', ') }}) is not null
-{% else %}
-select
-    cast(null as {{ dbt.type_string() }}) as column_name,
-    cast(null as {{ dbt.type_string() }}) as unique_field,
-    cast(null as {{ dbt.type_int() }}) as n_records
-where 1 = 0
-{% endif %}
-{% endmacro %}
-
--- funcsign: () -> bool
-{% macro is_glue_catalog_linked_database() -%}
-  {#- Check if the current model is using a Glue catalog-linked database -#}
-  {% if config and config.model %}
-    {%- set catalog_relation = adapter.build_catalog_relation(config.model) -%}
-    {% if catalog_relation and (catalog_relation|attr('catalog_linked_database_type') | lower == 'glue') %}
-      {{ return(true) }}
-    {% endif %}
-  {% endif %}
-  {{ return(false) }}
-{%- endmacro %}
-
--- funcsign: (relation) -> relation
-{% macro make_glue_compatible_relation(relation) -%}
-  {#-
-    AWS Glue requires:
-    1. Lowercase identifiers only
-    2. Double-quoted identifiers
-    
-    This macro creates a new relation with lowercased identifiers
-    and enabled quoting policy.
-  -#}
-  {% set lowercase_relation = api.Relation.create(
-      database=relation.database | lower,
-      schema=relation.schema | lower,
-      identifier=relation.identifier | lower,
-      type=relation.type,
-      quote_policy={'database': false, 'schema': true, 'identifier': true}
-  ) %}
-  {{ return(lowercase_relation) }}
-{%- endmacro %}
